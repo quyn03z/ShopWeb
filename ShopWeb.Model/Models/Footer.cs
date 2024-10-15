@@ -16,7 +16,6 @@ namespace ShopWeb.Model.Models
 		public string Id { get; set; }
 
 		[Required]
-		[MaxLength(250)] 
 		public string Content { get; set; }
 
 	}

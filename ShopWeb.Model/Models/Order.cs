@@ -43,6 +43,6 @@ namespace ShopWeb.Model.Models
 		public string PaymentStatus { get; set; }
 		public bool Status {  get; set; }
 
-		public virtual IEnumerable<OrderDetail> Details { get;}
+		public virtual IEnumerable<OrderDetail> OrderDetails { get;}
 	}
 }

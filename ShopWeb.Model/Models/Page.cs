@@ -19,6 +19,7 @@ namespace ShopWeb.Model.Models
 		[Required]
 		[MaxLength(256)]
 		public string Name { get; set; }
+
 		[Column(TypeName = "varchar")]
 		[Required]
 		[MaxLength(256)]

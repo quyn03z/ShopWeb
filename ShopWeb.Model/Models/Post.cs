@@ -37,5 +37,6 @@ namespace ShopWeb.Model.Models
 
 		[ForeignKey("CategoryId")]
 		public virtual PostCategory PostCategory { get; set; }
+
 	}
 }

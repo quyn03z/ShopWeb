@@ -11,6 +11,8 @@ namespace ShopWeb.Model.Models
 	[Table("VisitorStatistics")]
 	public class VisitorStatistic
 	{
+		public VisitorStatistic() { }
+
 		[Key]
 		public Guid Id { get; set; }
 

@@ -17,6 +17,7 @@ namespace ShopWeb.Data
 		public ShopWebDbContext(DbContextOptions<ShopWebDbContext> options) : base(options) 
 		{ }
 
+
 		public DbSet<Footer> Footers { get; set; }
 		public DbSet<Menu> Menus { get; set; }
 		public DbSet<MenuGroup> MenuGroups { get; set; }
@@ -37,6 +38,37 @@ namespace ShopWeb.Data
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			base.OnModelCreating(modelBuilder);
+
+			modelBuilder.Entity<OrderDetail>(entity =>
+			{
+				entity.HasKey(e => new { e.OrderId, e.ProductId });
+
+				entity.HasOne(od => od.Order)
+					  .WithMany(o => o.OrderDetails)
+					  .HasForeignKey(od => od.OrderId);
+
+				entity.HasOne(od => od.Product)
+					  .WithMany()
+					  .HasForeignKey(od => od.ProductId);
+
+				entity.Property(e => e.Quantity).IsRequired();
+			});
+
+			modelBuilder.Entity<PostTag>(entity =>
+			{
+				entity.HasKey(e => new { e.PostId, e.TagId });
+
+				entity.HasOne(pt => pt.Post)
+					  .WithMany(o => o.PostTags)
+					  .HasForeignKey(od => od.PostId);
+
+				entity.HasOne(od => od.Tag)
+					  .WithMany()
+					  .HasForeignKey(od => od.TagId);
+
+			});
+
+
 		}
 
 	}

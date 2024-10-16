@@ -11,6 +11,10 @@ namespace ShopWeb.Model.Models
 	[Table("Menus")]
 	public class Menu
 	{
+		public Menu()
+		{
+		}
+
 		[Key]
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		public int Id { get; set; }

@@ -11,6 +11,8 @@ namespace ShopWeb.Model.Models
 	[Table("Slide")]
 	public class Slide
 	{
+		public Slide() { }
+
 		[Key]
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		public int Id { get; set; }

@@ -11,6 +11,8 @@ namespace ShopWeb.Model.Models
 	[Table("SystemConfigs")]
 	public class SystemConfig
 	{
+		public SystemConfig() { }
+
 		[Key]
 		public int Id { get; set; }
 

@@ -24,6 +24,7 @@ namespace ShopWeb.Model.Abstract
 		public string MetaDescription { get; set; }
 		public bool Status { get; set; }
 
+		protected Auditable() { }
 
 	}
 }

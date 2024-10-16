@@ -12,6 +12,8 @@ namespace ShopWeb.Model.Models
 	[Table("Posts")]
 	public class Post : Auditable
 	{
+		public Post() { }
+
 		[Key]
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		public int Id { get; set; }
@@ -37,6 +39,8 @@ namespace ShopWeb.Model.Models
 
 		[ForeignKey("CategoryId")]
 		public virtual PostCategory PostCategory { get; set; }
+		public virtual ICollection<PostTag> PostTags { get; set; }
+
 
 	}
 }

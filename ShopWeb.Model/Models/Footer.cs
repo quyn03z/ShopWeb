@@ -17,6 +17,7 @@ namespace ShopWeb.Model.Models
 
 		[Required]
 		public string Content { get; set; }
+		public Footer() { }
 
 	}
 }

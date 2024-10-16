@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using ShopWeb.Data;
+
 namespace ShopWeb.Web
 {
 	public class Program
@@ -8,6 +11,11 @@ namespace ShopWeb.Web
 
 			// Add services to the container.
 			builder.Services.AddControllersWithViews();
+
+			builder.Services.AddDbContext<ShopWebDbContext>(options =>
+			{
+				options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+			});
 
 			var app = builder.Build();
 

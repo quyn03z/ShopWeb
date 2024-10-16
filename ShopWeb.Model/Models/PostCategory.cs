@@ -11,6 +11,8 @@ namespace ShopWeb.Model.Models
 {
 	public class PostCategory : Auditable
 	{
+		public PostCategory() { }
+
 		[Key]
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]	
 		public int Id { get; set; }

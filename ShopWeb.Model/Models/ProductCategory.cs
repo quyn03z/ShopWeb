@@ -12,6 +12,8 @@ namespace ShopWeb.Model.Models
 	[Table("ProductCategories")]
 	public class ProductCategory : Auditable
 	{
+		public ProductCategory() { }
+
 		[Key]
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)] 	
 		public int ID { get; set; }

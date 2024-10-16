@@ -11,6 +11,8 @@ namespace ShopWeb.Model.Models
 	[Table("Orders")]
 	public class Order
 	{
+		public Order() { }
+
 		[Key]
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]	
 		public int Id { get; set; }

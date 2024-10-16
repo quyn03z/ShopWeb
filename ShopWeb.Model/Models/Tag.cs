@@ -11,8 +11,11 @@ namespace ShopWeb.Model.Models
 	[Table("Tags")]
 	public class Tag
 	{
+		public Tag() { }
+
 		[Key]
 		[MaxLength(50)]
+		[Column(TypeName = "varchar")]
 		public string Id { get; set; }
 		[Required]
 		[MaxLength(50)]

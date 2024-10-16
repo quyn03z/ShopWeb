@@ -11,6 +11,8 @@ namespace ShopWeb.Model.Models
 	[Table("SupportOnlines")]
 	public class SupportOnline
 	{
+		public SupportOnline() { }
+
 		[Key]
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		public int Id { get; set; }
@@ -35,7 +37,6 @@ namespace ShopWeb.Model.Models
 		[MaxLength(50)]
 
 		public string Facebook { get; set; }
-		[MaxLength(50)]
 
 		public string Status { get; set; }
 

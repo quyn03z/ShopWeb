@@ -11,6 +11,8 @@ namespace ShopWeb.Model.Models
 	[Table("MenuGroups")]
 	public class MenuGroup
 	{
+		public MenuGroup() { }
+
 		[Key]
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		public int Id { get; set; }
